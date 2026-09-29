@@ -1,0 +1,54 @@
+<?php 
+include("db.php"); 
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Product</title>
+  <link rel="stylesheet" href="add_product.css">
+</head>
+<body>
+<div class="box1">
+  <h2>Add New Product</h2>
+  <form action="add_product.php" method="POST" enctype="multipart/form-data">
+    Image: <input type="file" name="product_image" accept="image/*" required><br><br>
+    
+    Name: <input type="text" name="name" required><br><br>
+    
+    Category:
+      <select name="category_id" required>
+      <option value="">-- Select Category --</option>
+
+      <?php
+      $res = mysqli_query($conn, "SELECT category_id, name FROM categories ORDER BY name");
+      while($row = mysqli_fetch_assoc($res)) {
+          echo "<option value='".$row['category_id']."'>".$row['category_id'].". ".$row['name']."</option>";
+      }
+      ?>
+
+    </select><br><br>
+    
+    Sub Category: 
+    <select name="sub_categories_id" required>
+      <option value="">-- Select Sub Category --</option>
+      <?php
+      $res = mysqli_query($conn, "SELECT sub_categories_id, name FROM sub_categories ORDER BY name");
+      while($row = mysqli_fetch_assoc($res)) {
+          echo "<option value='".$row['sub_categories_id']."'>".$row['sub_categories_id'].". ".$row['name']."</option>";
+      }
+      ?>
+    </select><br><br>
+    
+    Price: <input type="number" name="price" step="0.01" required><br><br>
+    
+    Stock Quantity: <input type="number" name="stock_quantity" required><br><br>
+    
+    Description: <textarea name="description" rows="4"></textarea><br><br>
+    
+    <input type="submit" value="Add Product">
+  </form>
+</div>
+</body>
+</html>
+

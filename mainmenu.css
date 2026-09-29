@@ -1,0 +1,203 @@
+body { background-color:white; }
+
+
+.topdiv  { 
+  width:100%;
+  height:270px;
+  border: 4px double black;
+  padding:0px;
+  margin:0px;
+}
+
+.headding01{
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 90px;
+  text-align: left;
+  margin-left: 10px;
+  margin-top:50px ;
+}
+
+.logo{
+  margin-top:-600px;
+  margin-left: 990px;
+  border: 4px double black;
+}
+
+
+/*
+.cart {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.cart i {
+  margin-right: 5px;
+}
+  */
+ 
+.menu{  
+  border:2px solid rgb(0, 0, 0);
+  height:20px;
+  width:900px; 
+  margin-top:10px;
+  cursor: pointer;
+}
+.menu a{  
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    padding: 0px;
+    height: 30px;
+    width:200px;
+    margin-top:-30px;
+    margin-left: 1000px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 6px 0px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    padding-top:0px ;
+    height: 20px;
+    width:200px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.dropdown-menu {
+    background-color: white;
+    display: none;
+    min-width:200px;
+    z-index: 1;
+    margin-left: 999px;
+    margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+.dropdown-menu li a {
+    color: black;
+    padding: 0px;
+}
+
+.dropdown-menu {
+    transition: 0.3s;
+    border: 1px solid black;
+}
+
+.photo01{
+    border: 5px double #000;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 300px;
+    width: 600px;
+}
+
+.photo02{
+    border: 5px double #000;
+    margin-top: 20px;
+    margin-left: 550px;
+    height: 300px;
+    width: 600px;
+}
+
+.photo03{
+    border: 5px double #000;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 300px;
+    width: 600px;
+}
+
+.photo04{
+    border: 5px double #000;
+    margin-top: 20px;
+    margin-left: 550px;
+    height: 300px;
+    width: 600px;
+}
+
+.producttable{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    border-spacing: 20px;
+}
+
+.one{
+    width: 20%;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.paragraph1{
+    border: 5px double #000;
+    font-family: "Bauhaus 93", sans-serif;
+    font-size: 30px;
+    margin-top: -310px;
+    margin-left: 750px;
+    height: 300px;
+    width: 300px;
+}
+
+.paragraph2{
+    border: 5px double #000;
+    font-family: "Bauhaus 93", sans-serif;
+    font-size: 30px;
+    margin-top: -310px;
+    margin-left: 20px;
+    height: 300px;
+    width: 300px;
+}
+
+.paragraph3{
+    border: 5px double #000;
+    font-family: "Bauhaus 93", sans-serif;
+    font-size: 30px;
+    margin-top: -310px;
+    margin-left: 750px;
+    height: 300px;
+    width: 300px;
+}
+
+.paragraph4{
+    border: 5px double #000;
+    font-family: "Bauhaus 93", sans-serif;
+    font-size: 30px;
+    margin-top: -310px;
+    margin-left: 20px;
+    height: 300px;
+    width: 300px;
+}

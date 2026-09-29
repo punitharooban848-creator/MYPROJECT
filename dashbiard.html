@@ -1,0 +1,63 @@
+<?php
+include("db.php");
+
+// Products count
+$product_sql = "SELECT COUNT(*) AS total_products FROM products";
+$product_result = $conn->query($product_sql);
+$product_count = $product_result->fetch_assoc()['total_products'];
+
+// Orders count (pending)
+$order_sql = "SELECT COUNT(*) AS pending_orders FROM orders WHERE status='Pending'";
+$order_result = $conn->query($order_sql);
+$pending_orders = $order_result->fetch_assoc()['pending_orders'];
+
+// Customers count
+$customer_sql = "SELECT COUNT(*) AS total_customers FROM customers";
+$customer_result = $conn->query($customer_sql);
+$customer_count = $customer_result->fetch_assoc()['total_customers'];
+
+// Sales total
+$sales_sql = "SELECT SUM(amount) AS total_sales FROM sales";
+$sales_result = $conn->query($sales_sql);
+$total_sales = $sales_result->fetch_assoc()['total_sales'];
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Women’s Clothing Admin Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="products.php">Products</a></li>
+            <li><a href="orders.php">Orders</a></li>
+            <li><a href="customers.php">Customers</a></li>
+            <li><a href="reports.php">Reports</a></li>
+            <li><a href="settings.php">Settings</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="card">
+            <h2>Total Sales</h2>
+            <p>₹50,000</p>
+        </section>
+        <section class="card">
+            <h2>Total Products</h2>
+            <p>120</p>
+        </section>
+        <section class="card">
+            <h2>Pending Orders</h2>
+            <p>15</p>
+        </section>
+        <section class="card">
+            <h2>Customers</h2>
+            <p>300</p>
+        </section>
+    </main>
+</body>
+</html>
